@@ -1,3 +1,5 @@
+package day1;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +33,7 @@ public class Elf implements AutoCloseable {
     }
 
     public String label() {
-        return "Elf #" + id;
+        return "day1.Elf #" + id;
     }
 
     public Integer id() {

@@ -1,3 +1,5 @@
+package day1;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -22,7 +24,7 @@ public class Main {
     protected static boolean setUp() {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("res/input.txt"));
+            reader = new BufferedReader(new FileReader("day1/res/input.txt"));
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
             return false;
