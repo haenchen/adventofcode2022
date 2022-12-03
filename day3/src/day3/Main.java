@@ -5,7 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
@@ -20,7 +22,7 @@ public class Main {
 
         List<String> lines = reader.lines().toList();
         String previousLine = "";
-        List<String> sharedItems = new ArrayList<>();
+        Set<String> sharedItems = new HashSet<>();
         int sumDoubledItems = 0, sumBadgeItems = 0;
         for (int i = 0; i < lines.size(); ++i) {
             String line = lines.get(i);
@@ -48,7 +50,6 @@ public class Main {
                     for (String character : sharedItems) {
                         if (line.contains(character)) {
                             sumBadgeItems += getItemValue(character.charAt(0));
-                            break;
                         }
                     }
                 }
@@ -59,7 +60,7 @@ public class Main {
             }
             else {
                 previousLine = "";
-                sharedItems = new ArrayList<>();
+                sharedItems = new HashSet<>();
             }
         }
 
