@@ -96,7 +96,7 @@ public class Rope {
                 return true;
             }
 
-            return (Math.pow(Math.abs(x - comp.x), 2) + Math.pow(Math.abs(y - comp.y), 2)) <= 2;
+            return (Math.pow(x - comp.x, 2) + Math.pow(y - comp.y, 2)) <= 2;
         }
 
         public Position moveX(int i) {
